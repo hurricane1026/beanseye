@@ -432,6 +432,12 @@ func (c *AutoScheduler) check() {
 		}
 	}
 	log.Println("---checking---")
+	for i, host_ids := range c.buckets {
+		log.Print("bucket ", i, " : ")
+		for _, id := range host_ids {
+			log.Print(" ", c.hosts[id].Addr, " ")
+		}
+	}
 	log.Println("buckets", c.buckets)
 	c.last_check = time.Now()
 }
