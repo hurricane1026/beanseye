@@ -431,6 +431,7 @@ func (c *AutoScheduler) check() {
 			}
 		}
 	}
-
+	log.Println("---checking---")
+	log.Println("buckets", c.buckets)
 	c.last_check = time.Now()
 }
